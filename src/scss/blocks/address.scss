@@ -1,0 +1,29 @@
+address {
+	margin: 20px 0;
+	font-family: var.$font_headings;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.8em;
+
+	span {
+		text-transform: uppercase;
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	svg {
+		flex-grow: 0;
+		width: auto;
+		height: 1em;
+		margin-right: 1ch;
+	}
+}

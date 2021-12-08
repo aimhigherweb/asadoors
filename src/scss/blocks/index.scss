@@ -1,0 +1,41 @@
+.block {
+	.cta {
+		margin: 20px auto;
+		text-align: center;
+	}
+
+	.content {
+		@include mixins.child_reset;
+	}
+}
+
+@media(min-width: 60em) {
+	.block {
+		margin-top: 50px;
+		margin-bottom: 50px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media(min-width: 70em) {
+	.block {
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+}
+
+@media(min-width: 90em) {
+	.block {
+		margin-top: 150px;
+		margin-bottom: 150px;
+	}
+}
+
+@import './address.scss';

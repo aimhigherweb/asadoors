@@ -1,0 +1,22 @@
+/*
+Theme Name: ASA Flexible Doors
+Version: 1.0.0
+*/
+
+@use './variables.scss' as var;
+@use './mixins.scss';
+
+@import './global/index.scss';
+
+@import './partials/layout.scss';
+@import './partials/header.scss';
+@import './partials/footer.scss';
+@import './partials/content.scss';
+
+@import './blocks/index.scss';
+
+body {
+	main {
+		@import './partials/gutenberg.scss';
+	}
+}

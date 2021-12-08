@@ -1,0 +1,113 @@
+@use './variables.scss' as var;
+
+@mixin child_reset {
+	> * {
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@mixin feature_background {
+	padding: 20px 0 50px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		width: 100vw;
+		transform: translateX(-50%);
+		background: var.$grey_light;
+	}
+}
+
+@mixin gutenberg_backgrounds {
+	@each $color, $hex in var.$coloursList {
+		&.has-#{$color}-background-color {
+			--background_colour: #{$hex};
+		}
+	}
+}
+
+@mixin gutenberg_text_colours {
+	@each $color, $hex in var.$coloursList {
+		&.has-#{$color}-color {
+			--text_colour: #{$hex};
+		}
+	}
+}
+
+@mixin child_animate_border_start($initial_colour, $final_colour, $border_width: 2px) {
+	border: none;
+	box-shadow: inset 0 0 0 $border_width $initial_colour;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 0;
+		transition: none;
+		border: $border_width solid transparent;
+		border-radius: inherit;
+		opacity: 0;
+	}
+
+	&:before {
+		top: 0;
+		left: 0;
+	}
+
+	&:after {
+		right: 0;
+		bottom: 0;
+	}
+}
+
+@mixin child_animate_border_end($initial_colour, $final_colour, $border_width: 2px, $delay: 0) {
+	&:before,
+	&:after {
+		width: 100%;
+		height: 100%;
+		opacity: 1;
+	}
+
+	$step_1: $delay;
+	$step_2: $delay + 0.25s;
+	$step_3: $delay + 0.5s;
+	$step_4: $delay + 0.75s;
+
+	&:before {
+		transition:
+			opacity $step_1 steps(1),
+			width 0.25s ease-out $step_1,
+			height 0.25s ease-out $step_2;
+		border-top-color: $final_colour;
+		border-right-color: $final_colour;
+	}
+
+	&:after {
+		transition:
+			opacity $step_1 steps(1),
+			border-color 0s ease-out $step_3,
+			width 0.25s ease-out $step_3,
+			height 0.25s ease-out $step_4;
+		border-bottom-color: $final_colour;
+		border-left-color: $final_colour;
+	}
+}
+
+@mixin animate_border($initial_colour, $final_colour, $border_width: 2px, $delay: 0) {
+	@include child_animate_border_start($initial_colour, $final_colour, $border_width);
+
+	&:hover {
+		@include child_animate_border_end($initial_colour, $final_colour, $border_width, $delay);
+	}
+}

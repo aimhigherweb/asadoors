@@ -1,0 +1,29 @@
+$black: #000000;
+$grey: #4c4c4d;
+$white: #ffffff;
+$grey_light: #e5e5e5;
+
+$neutral: $black;
+$good: #64ad66;
+$success: $good;
+$warning: #ff8c00;
+$fail: #e53f51;
+$error: $fail;
+
+// Blue Theme
+$blue: #0397d6;
+$red: #ab0534;
+
+
+// Colours Object
+$coloursList: (
+	'blue': $blue,
+	'red': $red,
+	'grey': $grey,
+	'grey-light': $grey_light,
+	'black': $black,
+	'white': $white
+);
+
+$font_headings: 'Roboto Slab', serif;
+$font_main: 'Roboto', sans-serif;
