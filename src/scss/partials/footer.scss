@@ -8,8 +8,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
-  background-color: #f3f6fa;
-
+  background-color: var.$white;
 
   nav {
     ul {
@@ -22,7 +21,7 @@
     a {
       padding-bottom: 10px;
       text-decoration: none;
-      color: black;
+      color: var.$black;
       height: 30px;
 
       &:hover {
@@ -33,15 +32,14 @@
 
   .logo {
     text-decoration: none;
-    
+
     font-weight: bold;
     display: flex;
     height: 40px;
     flex-direction: row;
-align-items: center;
-font: size 16px;
-margin-bottom: 20px;
-
+    align-items: center;
+    font: size 16px;
+    margin-bottom: 20px;
 
     svg {
       height: 30px;
@@ -49,34 +47,32 @@ margin-bottom: 20px;
       margin-right: 10px;
       align-content: center;
     }
-
-    ::first-letter {
-      color: var.$blue
-    }
- 
   }
 
   .contact {
     width: 100%;
     align-content: flex-start;
- 
-flex-direction: column;
-    address{
+
+    flex-direction: column;
+    address {
       margin-top: 10px;
       margin-bottom: 10px;
     }
     display: flex;
 
+    svg {
+      margin-right: auto;
 
+      width: 22px;
+      height: auto;
+      margin-right: 10px;
 
-    svg {    
-      display: flex;
-      justify-content: flex-start;
-   
-width:22px;
-height:auto;
-margin: 10px;
-
+      &:hover{
+        
+          fill: var.$white;
+          color: var.$blue;
+        
+      }
     }
     a {
       display: flex;
@@ -84,13 +80,12 @@ margin: 10px;
       display: block;
       color: var.$font-color;
       font-weight: normal;
-padding:0;
+      padding: 0;
     }
 
     ul {
       flex-direction: row;
     }
-  
   }
   p {
     margin-bottom: 30px;
@@ -104,17 +99,9 @@ padding:0;
     line-height: 150%;
     text-align: left;
     padding-top: 20px;
-
   }
 
-  &:hover {
-    text-decoration: none;
 
-    svg {
-      fill: var.$white;
-      color: var.$blue;
-    }
-  }
 
   a {
     color: var.$font-color;
@@ -131,7 +118,6 @@ padding:0;
     flex-direction: row;
   }
   .footer {
-    
     font-size: 14px;
     width: 100vw;
     .logo {
@@ -139,8 +125,8 @@ padding:0;
     }
     .contact {
       width: 220px;
-      margin-left:10px;
-      h2{
+      margin-left: 10px;
+      h2 {
         margin: 0;
         padding-top: 10px;
       }
@@ -156,8 +142,7 @@ padding:0;
       }
       a {
         display: block;
-  
-     
+
         padding: 10px;
       }
 
@@ -166,28 +151,22 @@ padding:0;
 
         ul {
           flex-direction: row;
-          justify-content: flex-end
+         margin-right: auto;
         }
       }
     }
 
     .copyright {
       display: flex;
-width: 100%;
+      width: 100%;
       justify-content: center;
       margin: 0;
-     
     }
-    .icons{
-      width:100%
-;
+    .icons {
+      width: 100%;
     }
   }
 }
-
-
-
-
 
 @media (min-width: 60em) {
   .footer {
@@ -229,7 +208,6 @@ width: 100%;
 $max_width: 1200px * (10/9);
 
 @media (min-width: $max_width) {
-
   .footer {
     font-size: 15px;
     padding: 50px calc(50vw - 600px);
@@ -239,7 +217,6 @@ $max_width: 1200px * (10/9);
 @media (min-width: 80em) {
   .footer {
     font-size: 15px;
-
   }
   .footer_widget {
     margin-top: 20px;
