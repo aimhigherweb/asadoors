@@ -6,6 +6,7 @@
 ?>
 
 <footer class="footer">
+<div class="footernotcopyright">
 	<div>
 		<a class="logo" href="/">
 			<?php 
@@ -20,7 +21,11 @@
 		</a>
 		<p>©
 			<?php echo date("Y"); ?>
-			<?php echo get_bloginfo('name'); ?>. All rights reserved.
+		
+			<?php echo get_bloginfo('name'); ?>. 
+			<br/>
+			
+			All rights reserved.
 		</p>
 	</div>
 	<nav>
@@ -66,7 +71,7 @@
 		</nav>
 	</div>
 
-
+				</div>
 
 
 
