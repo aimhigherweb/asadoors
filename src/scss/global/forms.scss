@@ -21,7 +21,6 @@ form {
 		border-radius: 2em;
 		background: var.$white;
 		color: var.$black;
-		font-family: var.$font_headings;
 		font-size: 0.67em;
 		font-weight: 400;
 		line-height: 1.25;
@@ -115,7 +114,6 @@ form {
 			border-radius: 2em;
 			background: var.$blue;
 			color: var.$white;
-			font-family: var.$font_headings;
 			font-weight: 600;
 			line-height: 1;
 			text-transform: uppercase;
@@ -163,7 +161,7 @@ form {
 div.wpforms-container {
 	form.wpforms-form {
 		input, textarea, select {
-			&[class*=wpforms] {
+			&[class*='wpforms'] {
 				display: block;
 				width: 100%;
 				max-width: unset;
@@ -179,7 +177,7 @@ div.wpforms-container {
 		}
 
 		.wpforms-field-row  {
-			&[class*=wpforms] {
+			&[class*='wpforms'] {
 				width: 100%;
 				max-width: unset;
 			}

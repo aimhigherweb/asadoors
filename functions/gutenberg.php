@@ -6,6 +6,11 @@
 			'color' => '#194C9A',
 		],
 		[
+			'name'  => 'Dark Blue',
+			'slug'  => 'blue-dark',
+			'color' => '#192E4D',
+		],
+		[
 			'name'  => 'Eggshell',
 			'slug'  => 'eggshell',
 			'color' => '#F4EBD9',
@@ -13,12 +18,22 @@
 		[
 			'name'  => 'Red',
 			'slug'  => 'red',
+			'color' => '#C43B3E',
+		],
+		[
+			'name'  => 'Dark Red',
+			'slug'  => 'red-dark',
 			'color' => '#9D2F32',
 		],
 		[
 			'name'  => 'Black',
 			'slug'  => 'black',
-			'color' => '#000000',
+			'color' => '#111111',
+		],
+		[
+			'name'  => 'Grey',
+			'slug'  => 'grey',
+			'color' => '#999999',
 		],
 		[
 			'name'  => 'White',

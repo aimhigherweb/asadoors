@@ -4,17 +4,17 @@
 
 		// Social Menu Icons
 		acf_add_local_field_group(array(
-			'key' => 'aimhigher_social_icons',
+			'key' => 'group_61b083a9d1829',
 			'title' => 'Social Menu Icons',
 			'fields' => array(
 				array(
-					'key' => 'aimhigher_social_icons_field_social_icon',
+					'key' => 'field_61b083bbe6676',
 					'label' => 'Icon',
 					'name' => 'icon',
 					'type' => 'image',
-					'required' => 1,
+					'required' => 0,
 					'return_format' => 'url',
-					'preview_size' => 'thumbnail',
+					'preview_size' => 'medium',
 					'library' => 'all',
 					'mime_types' => 'svg',
 				),
@@ -28,9 +28,6 @@
 					),
 				),
 			),
-			'label_placement' => 'top',
-			'instruction_placement' => 'label',
-			'active' => true,
 		));
 
 		// Options - Business Info

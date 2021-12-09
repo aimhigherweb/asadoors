@@ -8,7 +8,6 @@
 	border-bottom: 10px solid var.$blue;
 	background: var.$white;
 	color: var.$red;
-	font-family: var.$font_headings;
 
 	.logo {
 		display: block;
@@ -17,10 +16,6 @@
 
 		img, svg {
 			max-width: 100%;
-		}
-
-		&:hover {
-			outline: 3px solid var.$blue;
 		}
 	}
 
@@ -32,16 +27,12 @@
 		text-align: center;
 
 		&.open {
-			ul:not(.sub-menu) {
+			ul {
 				display: block;
 			}
 		}
 
 		ul {
-			color: var.$blue;
-		}
-
-		ul:not(.sub-menu) {
 			display: none;
 			position: absolute;
 			z-index: 150;
@@ -54,23 +45,7 @@
 			border-radius: 12px;
 			background: var.$white;
 			box-shadow: 0 1px 3px rgba(var.$neutral, 0.15), 0 0 8px rgba(var.$neutral, 0.1);
-		}
-
-		.sub-menu {
-			font-size: 0.6em;
-		}
-
-		.sub {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			svg {
-				display: none;
-				width: 10px;
-				height: auto;
-				margin-left: 1ch;
-			}
+			color: var.$blue;
 		}
 
 		a {
@@ -94,6 +69,11 @@
 					background: var.$red;
 					color: var.$white;
 				}
+			}
+
+			&.cta {
+				background: var.$blue;
+				color: var.$white;
 			}
 		}
 	}
@@ -139,24 +119,18 @@ nav {
 			}
 		}
 
-
-
 		nav {
 			flex-shrink: 0;
 			font-size: 0.8em;
 			font-weight: 500;
 
 			&.open {
-				ul:not(.sub-menu) {
+				ul {
 					display: flex;
 				}
 			}
 
 			ul {
-				color: var.$blue;
-			}
-
-			ul:not(.sub-menu) {
 				display: flex;
 				position: static;
 				align-items: center;
@@ -165,44 +139,7 @@ nav {
 				overflow: visible;
 				background: transparent;
 				box-shadow: none;
-			}
-
-			li {
-				position: relative;
-
-				&:hover {
-					.sub-menu {
-						display: block;
-					}
-				}
-			}
-
-			.sub-menu {
-				display: none;
-				position: absolute;
-				top: 100%;
-				width: 200px;
-				max-width: max-content;
-				background: var.$white;
-				box-shadow: 0 1px 3px rgba(var.$neutral, 0.15), 0 0 8px rgba(var.$neutral, 0.1);
-				font-size: 1em;
-				text-align: left;
-
-				li {
-
-					margin: 0;
-				}
-
-				a {
-					max-width: 200px;
-					padding: 0.5em 1em;
-				}
-			}
-
-			.sub {
-				svg {
-					display: block;
-				}
+				color: var.$blue;
 			}
 
 			a {
@@ -222,6 +159,14 @@ nav {
 					border-color: var.$white;
 					background: transparent;
 					color: var.$white;
+				}
+
+				&.cta {
+					padding-right: calc(1em + 20px);
+					background-image: url('./src/img/edit_white.png');
+					background-repeat: no-repeat;
+					background-position: calc(100% - 10px) center;
+					background-size: 1em auto;
 				}
 			}
 		}

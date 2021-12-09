@@ -2,9 +2,6 @@
 	position: relative;
 	padding: 20px 20px 5px;
 	border-top: 10px solid var.$blue;
-	background: var.$red;
-	color: var.$white;
-	font-family: var.$font_headings;
 	text-align: center;
 
 	nav {
@@ -30,7 +27,6 @@
 
 		svg {
 			height: 3em;
-			border-radius: 50%;
 			fill: var.$blue;
 			color: var.$white;
 		}

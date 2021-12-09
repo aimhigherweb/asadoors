@@ -1,29 +1,39 @@
-$black: #000000;
-$grey: #4c4c4d;
+$black: #111111;
+$grey: #999999;
 $white: #ffffff;
-$grey_light: #e5e5e5;
+$background: #f3f6fa;
+
+$red: #c43b3e;
+$red_light: #e94635;
+$red_dark: #9d2f32;
+
+$blue: #194c9a;
+$blue_mid: #538fe8;
+$blue_light: #65afff;
+$blue_dark: #192e4d;
+
+$eggshell: #faf5ec;
+$eggshell_dark: #f4ebd9;
 
 $neutral: $black;
 $good: #64ad66;
 $success: $good;
 $warning: #ff8c00;
-$fail: #e53f51;
+$fail: $red;
 $error: $fail;
 
-// Blue Theme
-$blue: #0397d6;
-$red: #ab0534;
-
+$gradient_dark: linear-gradient(90deg, $blue_dark 0%, #07162c 100%);
 
 // Colours Object
 $coloursList: (
 	'blue': $blue,
 	'red': $red,
 	'grey': $grey,
-	'grey-light': $grey_light,
+	'blue-dark': $blue_dark,
+	'red-dark': $red_dark,
 	'black': $black,
 	'white': $white
 );
 
-$font_headings: 'Roboto Slab', serif;
-$font_main: 'Roboto', sans-serif;
+$font_headings: 'Swiss 721 BT', 'Inter', sans-serif;
+$font_main: 'Inter', sans-serif;

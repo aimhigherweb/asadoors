@@ -59,7 +59,15 @@ module.exports = {
 			'block-no-empty': true,
 			'declaration-block-no-shorthand-property-overrides': true,
 			'declaration-block-no-duplicate-properties': [true, {ignore: ["consecutive-duplicates"]}],
-			'property-no-unknown': true,
+			'property-no-unknown': [
+				true, 
+				{
+					ignoreProperties: [
+						'composes', 
+						'font-named-instance'
+					]
+				}
+			],
 			'unit-no-unknown': true,
 			'string-no-newline': true,
 			'function-calc-no-unspaced-operator': true,
