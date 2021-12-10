@@ -2,11 +2,11 @@
 	position: relative;
 	padding: 20px 20px 5px;
 	border-top: 10px solid var.$blue;
-	background-color: var.$white;
-	font-family: Inter;
+	background-color: var.$grey;
+	font-family: $font_main;
 	font-size: 15px;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 400;
 
 	text-align: left;
 
@@ -14,8 +14,6 @@
 		ul {
 			display: flex;
 			flex-direction: column;
-			flex-wrap: wrap;
-			justify-content: flex-start;
 		}
 
 		a {
@@ -38,7 +36,7 @@
 		margin-bottom: 20px;
 		font: size 16px;
 
-		font-weight: bold;
+		font-weight: 700;
 		text-decoration: none;
 
 		svg {
@@ -66,7 +64,6 @@
 			width: 22px;
 			height: auto;
 			margin-right: auto;
-			margin-right: 10px;
 
 			&:hover{
 
@@ -80,8 +77,8 @@
 			display: block;
 			justify-content: flex-start;
 			padding: 0;
-			color: var.$font-color;
-			font-weight: normal;
+			color: var.$grey_dark;
+			font-weight: 400;
 		}
 
 		ul {
@@ -96,16 +93,16 @@
 	h2 {
 		padding-top: 20px;
 		color: var.$font-color;
-		font-family: Inter;
+
 		font-size: 14px;
-		font-style: normal;
-		font-weight: bold;
-		line-height: 150%;
+
+		font-weight: 700;
+
 		text-align: left;
 	}
 
 	a {
-		color: var.$font-color;
+		color: var.$grey_dark;
 	}
 }
 
@@ -114,12 +111,13 @@
 }
 
 @media (min-width: 50em) {
-	.footernotcopyright {
+	.footernotcopyright{
 		display: flex;
 		flex-direction: row;
 	}
 
 	.footer {
+
 		width: 100vw;
 		font-size: 14px;
 
@@ -164,7 +162,7 @@
 
 		.copyright {
 			display: flex;
-			justify-content: center;
+			justify-content: flex-end;
 			width: 100%;
 			margin: 0;
 		}
@@ -179,7 +177,7 @@
 	.footer {
 		width: 100vw;
 		padding: 50px 5vw 20px;
-		font-size: 15x;
+		font-size: 15px;
 
 		nav {
 			&.icons {
