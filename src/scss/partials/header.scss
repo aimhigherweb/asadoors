@@ -4,9 +4,10 @@
 	justify-content: flex-start;
 	padding-top: 30px;
 	padding-bottom: 30px;
-	border-bottom: 10px solid var.$blue;
 	background: var.$white;
-	font-family: $font_main;
+	box-shadow: 0 1px 3px rgba(var.$neutral, 0.15),
+		0 0 8px rgba(var.$neutral, 0.1);
+	font-family: var.$font_main;
 
 	.logo {
 		display: block;
@@ -52,6 +53,7 @@
 			width: 50vw;
 			max-width: 400px;
 			max-height: calc(100vh - 150px);
+			margin-right: 10px;
 			overflow-y: auto;
 			border-radius: 12px;
 			background: var.$white;
@@ -97,13 +99,15 @@
 	border-radius: 3px;
 	border-color: var.$black;
 	background: none;
-	color: var.$grey_dark;
+
+	color:var.$black;
 
 	svg {
 		width: auto;
 		height: 12px;
 		margin-right: 6px;
-		color: var.$white;
+
+		color: var.$blue;
 	}
 
 	ul{
@@ -111,14 +115,20 @@
 	}
 
 	&:hover {
-		background-color: var.$red;
+		background-color: var.$blue;
+
 		color: var.$white;
+
+		path{
+			fill:var.$white;
+		}
 	}
 }
 
 @media (min-width: 50em) {
 	.header {
 		color: var.$grey_dark;
+
 
 		.logo {
 			flex-shrink: 1;
@@ -130,8 +140,7 @@
 
 		nav {
 			flex-grow: 1;
-			flex-shrink: 0;
-			font-size: 0.8em;
+			font-size: 15px;
 			font-weight: 500;
 
 			&.open {
@@ -217,7 +226,7 @@
 		width: 100vw;
 
 		nav {
-			font-size: 0.9em;
+			font-size: 15px;
 		}
 	}
 }
@@ -225,7 +234,7 @@
 @media (min-width: 70em) {
 	.header {
 		nav {
-			font-size: 1em;
+			font-size: 15px;
 		}
 	}
 }
@@ -235,7 +244,15 @@ $max_width: 1200px * (10/9);
 @media (min-width: 80em) {
 	.header {
 		nav {
-			font-size: 1.2em;
+			font-size: 15px;
+		}
+	}
+}
+
+@media (min-width: 90em) {
+	.header {
+		nav {
+			font-size: 15px;
 		}
 	}
 }

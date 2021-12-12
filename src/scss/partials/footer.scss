@@ -1,9 +1,9 @@
 .footer {
 	position: relative;
 	padding: 20px 20px 5px;
-	border-top: 10px solid var.$blue;
-	background-color: var.$grey;
-	font-family: $font_main;
+	background-color: #f3f6fa;
+
+	font-family: var.$font_main;
 	font-size: 15px;
 	font-style: normal;
 	font-weight: 400;
@@ -55,7 +55,7 @@
 		width: 100%;
 
 		address {
-			margin-top: 10px;
+			margin:0;
 			margin-bottom: 10px;
 		}
 
@@ -63,19 +63,25 @@
 
 			width: 22px;
 			height: auto;
+
 			margin-right: auto;
 
 			&:hover{
 
 				fill: var.$white;
-				color: var.$blue;
+				color: var.$grey_dark;
 			}
 		}
 
+		li{
+			margin-right:10px;
+		}
+
 		a {
+
 			display: flex;
-			display: block;
 			justify-content: flex-start;
+
 			padding: 0;
 			color: var.$grey_dark;
 			font-weight: 400;
@@ -91,8 +97,8 @@
 	}
 
 	h2 {
-		padding-top: 20px;
-		color: var.$font-color;
+
+		color: var.$grey_dark;
 
 		font-size: 14px;
 
@@ -111,13 +117,11 @@
 }
 
 @media (min-width: 50em) {
-	.footernotcopyright{
+	.footer {
 		display: flex;
 		flex-direction: row;
-	}
 
-	.footer {
-
+		flex-wrap: wrap;
 		width: 100vw;
 		font-size: 14px;
 
@@ -128,17 +132,13 @@
 		.contact {
 			width: 220px;
 			margin-left: 10px;
-
-			h2 {
-				margin: 0;
-				padding-top: 10px;
-			}
 		}
 
 		nav {
 			display: flex;
+
+			flex-grow: 1;
 			justify-content: center;
-			width: 100%;
 
 			ul {
 				flex-direction: row;
@@ -164,7 +164,7 @@
 			display: flex;
 			justify-content: flex-end;
 			width: 100%;
-			margin: 0;
+			margin: 10px;
 		}
 
 		.icons {

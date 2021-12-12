@@ -17,7 +17,7 @@
 	
 	<nav class="main">
 		<button class="hamburger" onclick="toggleMenu()">
-			<?php echo inline_svg(get_template_directory_uri() . '/src/img/hamburger.svg'); ?>
+			<?php  echo inline_svg(get_template_directory_uri() . '/src/img/hamburger.svg'); ?>
 			Menu
 		</button>
 		<ul>

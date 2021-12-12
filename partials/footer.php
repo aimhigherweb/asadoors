@@ -6,7 +6,7 @@
 ?>
 
 <footer class="footer">
-<div class="footernotcopyright">
+
 		<div>
 			<a class="logo" href="/">
 				<?php 
@@ -69,7 +69,7 @@
 			</nav>
 		</div>
 
-		</div>
+	
 
 
 
