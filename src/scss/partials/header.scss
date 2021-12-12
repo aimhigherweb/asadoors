@@ -1,30 +1,42 @@
 .header {
 	display: flex;
 	position: relative;
-	align-content: center;
-	align-items: center;
-	justify-content: space-between;
-	padding: 20px;
-	border-bottom: 10px solid var.$blue;
+	justify-content: flex-start;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	background: var.$white;
-	color: var.$red;
+	box-shadow: 0 1px 3px rgba(var.$neutral, 0.15),
+		0 0 8px rgba(var.$neutral, 0.1);
+	font-family: var.$font_main;
 
 	.logo {
 		display: block;
 		width: 200px;
+		height: 100%;
 		margin-right: auto;
 
-		img, svg {
+		img,
+		svg {
+			display: flex;
 			max-width: 100%;
+			margin-right: 20px;
+			margin-left: 20px;
 		}
 	}
 
 	nav {
 		position: relative;
 		z-index: 50;
+		align-content: center;
+
 		font-size: 1.4em;
 		font-weight: 600;
 		text-align: center;
+
+		button {
+			margin-right: 20px;
+			text-transform: capitalize;
+		}
 
 		&.open {
 			ul {
@@ -38,24 +50,19 @@
 			z-index: 150;
 			top: 100%;
 			right: 0;
-			width: 90vw;
+			width: 50vw;
 			max-width: 400px;
 			max-height: calc(100vh - 150px);
+			margin-right: 10px;
 			overflow-y: auto;
 			border-radius: 12px;
 			background: var.$white;
-			box-shadow: 0 1px 3px rgba(var.$neutral, 0.15), 0 0 8px rgba(var.$neutral, 0.1);
-			color: var.$blue;
+			box-shadow: 0 1px 3px rgba(var.$neutral, 0.15),
+				0 0 8px rgba(var.$neutral, 0.1);
 		}
 
 		a {
 			padding: 0.6em;
-
-			&:hover {
-				background: var.$blue;
-				color: var.$white;
-				text-decoration: none;
-			}
 
 			.label {
 				position: static;
@@ -64,15 +71,18 @@
 		}
 
 		li {
+			margin-left: 10px;
+			text-decoration:none;
+
 			&.current_page_item {
-				> a {
-					background: var.$red;
-					color: var.$white;
-				}
+				font-weight: 700;
+				text-decoration:none;
 			}
 
-			&.cta {
-				background: var.$blue;
+			&.cta{
+				margin:0;
+				border:none;
+				background-color:var.$blue;
 				color: var.$white;
 			}
 		}
@@ -80,48 +90,57 @@
 }
 
 .hamburger {
+	align-items: center;
+	width: 97px;
+	height: 40px;
 	margin: 0;
-	border: 2px solid transparent;
+	padding: 0;
+	border: 2px solid;
+	border-radius: 3px;
+	border-color: var.$black;
 	background: none;
+
+	color:var.$black;
 
 	svg {
 		width: auto;
-		height: 60px;
+		height: 12px;
+		margin-right: 6px;
+
+		color: var.$blue;
+	}
+
+	ul{
+		width: 50vw;
 	}
 
 	&:hover {
-		background: var.$blue;
+		background-color: var.$blue;
+
 		color: var.$white;
+
+		path{
+			fill:var.$white;
+		}
 	}
 }
 
-nav {
-	svg {
-		height: 1em;
-		fill: none;
-		color: inherit;
-	}
-}
-
-@media(min-width: 50em) {
+@media (min-width: 50em) {
 	.header {
-		margin-bottom: 50px;
-		padding: 50px 20px;
+		color: var.$grey_dark;
+
 
 		.logo {
 			flex-shrink: 1;
-		}
-
-		.background {
-			svg {
-				bottom: -50px;
-				height: 400px;
-			}
+			width: auto;
+			height: 50px;
+			margin: 0;
+			margin-left: 50px;
 		}
 
 		nav {
-			flex-shrink: 0;
-			font-size: 0.8em;
+			flex-grow: 1;
+			font-size: 15px;
 			font-weight: 500;
 
 			&.open {
@@ -133,21 +152,22 @@ nav {
 			ul {
 				display: flex;
 				position: static;
-				align-items: center;
+				flex-shrink: 0;
+				align-items: flex-start;
 				width: auto;
 				max-width: unset;
+				margin-right: 0;
 				overflow: visible;
 				background: transparent;
 				box-shadow: none;
-				color: var.$blue;
 			}
 
 			a {
 				padding: 0.5em;
+				text-decoration: none;
 
 				.label {
 					position: absolute;
-					right: -100vw;
 				}
 			}
 
@@ -155,18 +175,42 @@ nav {
 				margin-left: 10px;
 				border-bottom: 2px solid transparent;
 
+				&:hover {
+					text-decoration: underline;
+				}
+
 				&.current_page_item {
-					border-color: var.$white;
+					border-color: var.$red;
 					background: transparent;
-					color: var.$white;
+
+					text-decoration: none;
 				}
 
 				&.cta {
+					width: 170px;
+					margin-right: 40px;
+					margin-left: auto;
+					padding: 0;
 					padding-right: calc(1em + 20px);
-					background-image: url('./src/img/edit_white.png');
+
+					border: 2px solid;
+					border-radius: 3px;
+					border-color: var.$black;
+					background-color: rgb(255, 255, 255);
+					background-image: url('./src/img/edit_black.png');
 					background-repeat: no-repeat;
 					background-position: calc(100% - 10px) center;
 					background-size: 1em auto;
+					color: var.$grey_dark;
+					text-align: left;
+					text-decoration: none;
+
+					&:hover {
+						background-color: var.$blue;
+						background-image: url('./src/img/edit_white.png');
+						background-position: calc(100% - 10px) center;
+						color: var.$white;
+					}
 				}
 			}
 		}
@@ -177,38 +221,38 @@ nav {
 	}
 }
 
-@media(min-width: 60em) {
+@media (min-width: 60em) {
 	.header {
 		width: 100vw;
-		margin: 0 auto 50px;
-		padding: 50px 5vw;
 
 		nav {
-			font-size: 0.9em;
+			font-size: 15px;
 		}
 	}
 }
 
-@media(min-width: 70em) {
+@media (min-width: 70em) {
 	.header {
 		nav {
-			font-size: 1em;
+			font-size: 15px;
 		}
 	}
 }
 
 $max_width: 1200px * (10/9);
 
-@media(min-width: $max_width) {
+@media (min-width: 80em) {
 	.header {
-		padding: 50px calc(50vw - 600px);
+		nav {
+			font-size: 15px;
+		}
 	}
 }
 
-@media(min-width: 80em) {
+@media (min-width: 90em) {
 	.header {
 		nav {
-			font-size: 1.2em;
+			font-size: 15px;
 		}
 	}
 }
