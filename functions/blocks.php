@@ -10,11 +10,22 @@
 				'category' => 'design',
 				'icon' => 'location',
 			));
+
+			acf_register_block(array(
+				'name' => 'subtitle_block',
+				'title' => 'Subtitle',
+				'description' => 'A block to display a large page subtitle',
+				'render_callback' => 'subtitle_block_render_callback',
+			));
 		}
 	}
 	add_action('acf/init', 'my_acf_init');
 
 	function address_block_render_callback($block) {
 		include(get_theme_file_path('/blocks/address.php'));
+	}
+
+	function subtitle_block_render_callback($block) {
+		include(get_theme_file_path('/blocks/subtitle.php'));
 	}
 ?>
