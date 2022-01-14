@@ -37,6 +37,8 @@
 
 <?php if(check_field_value([$address, $address['line_1']])): ?>
 
+	<h2><?php echo get_bloginfo('name'); ?></h2>
+
 	<address>
 		<?php echo $address['line_1']; ?><br/>
 		<?php if($address['line_2']) : ?>

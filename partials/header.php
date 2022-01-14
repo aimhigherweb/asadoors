@@ -1,5 +1,8 @@
 <?php
 	$logo = wp_get_attachment_image_src(get_theme_mod( 'custom_logo' ), 'full')[0];
+	$name = get_bloginfo('name');
+	$name_words = explode(' ', $name);
+	$name_letters = str_split($name_words[0]);
 ?>
 
 <header class="header">
@@ -12,7 +15,14 @@
 				echo '<img src="' . $logo . '" />';
 			}
 		?>
-		<span class="sr-only">Return to homepage</span>
+		<span class="site-name">
+			<span class="coloured_letters" aria-label="<?php echo $name_words[0]; ?></php>">
+				<?php foreach ($name_letters as $letter) {
+					echo '<span>' . $letter . '</span>';
+				} ?>
+			</span>
+			<?php echo ' ' . implode(array_slice($name_words, 1), ' '); ?>
+		</span>
 	</a>
 	
 	<nav class="main">

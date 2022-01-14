@@ -1,7 +1,8 @@
 .header {
 	display: flex;
 	position: relative;
-	justify-content: flex-start;
+	align-items: center;
+	justify-content: space-between;
 	padding-top: 30px;
 	padding-bottom: 30px;
 	background: var.$white;
@@ -10,17 +11,28 @@
 	font-family: var.$font_main;
 
 	.logo {
-		display: block;
-		width: 200px;
-		height: 100%;
-		margin-right: auto;
+		display: flex;
+		align-items: center;
+		width: auto;
+		height: 3em;
+		margin: 0 20px;
+		font-size: 1em;
+		text-decoration: none;
 
 		img,
 		svg {
 			display: flex;
+			width: auto;
 			max-width: 100%;
-			margin-right: 20px;
-			margin-left: 20px;
+			max-height: 100%;
+		}
+
+		&:hover {
+			outline: 3px solid var.$red;
+
+			* {
+				filter: grayscale(1);
+			}
 		}
 	}
 
@@ -89,6 +101,14 @@
 	}
 }
 
+.site-name {
+	margin-left: 1ch;
+	color: var.$neutral;
+	font-family: var.$font_headings;
+	font-weight: 600;
+	text-decoration: none;
+}
+
 .hamburger {
 	align-items: center;
 	width: 97px;
@@ -129,13 +149,21 @@
 	.header {
 		color: var.$grey_dark;
 
-
 		.logo {
-			flex-shrink: 1;
-			width: auto;
-			height: 50px;
+			flex-shrink: 0;
 			margin: 0;
 			margin-left: 50px;
+
+			svg {
+				font-size: 4em;
+			}
+
+			.site-name {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				opacity: 0;
+			}
 		}
 
 		nav {

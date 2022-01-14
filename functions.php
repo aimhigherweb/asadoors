@@ -8,7 +8,8 @@
     register_nav_menus(array (
         'main_menu' => 'Main Menu',
         'footer_menu' => 'Footer Menu',
-        'social_menu' => 'Social Menu'
+        'social_menu' => 'Social Menu',
+        'legal_menu' => 'Legal Menu'
     ));
 
     //Add Social Icons to Nav Menu

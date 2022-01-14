@@ -111,3 +111,15 @@
 		@include child_animate_border_end($initial_colour, $final_colour, $border_width, $delay);
 	}
 }
+
+@mixin coloured_letters {
+	> * {
+		&:nth-child(2n) {
+			color: var.$red;
+		}
+
+		&:nth-child(2n - 1) {
+			color: var.$blue;
+		}
+	}
+}

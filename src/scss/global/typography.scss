@@ -9,11 +9,17 @@ a {
 	color: var.$red;
 	text-underline-offset: 0.4em;
 
+	@include mixins.gutenberg_text_colours;
+
+	svg {
+		width: auto;
+		height: 1em;
+		color: inherit;
+	}
+
 	&:hover {
 		text-decoration: none;
 	}
-
-	@include mixins.gutenberg_text_colours;
 }
 
 p {
@@ -21,7 +27,7 @@ p {
 }
 
 h1, h2, h3, h4, h5 {
-	color: var.$blue;
+	color: var.$neutral;
 	font-family: var.$font_headings;
 
 	a {
@@ -29,7 +35,7 @@ h1, h2, h3, h4, h5 {
 		text-decoration: none;
 
 		&:hover {
-			text-decoration: underline;
+			text-decoration: none;
 		}
 	}
 
@@ -37,6 +43,22 @@ h1, h2, h3, h4, h5 {
 		@include mixins.gutenberg_text_colours;
 
 		color: var(--text_colour);
+	}
+}
+
+h1 {
+	font-size: 2em;
+
+	@media(min-width: 50em) {
+		font-size: 3em;
+	}
+
+	@media(min-width: 60em) {
+		font-size: 4em;
+	}
+
+	@media(min-width: 80em) {
+		font-size: 4.5em;
 	}
 }
 
@@ -85,6 +107,10 @@ nav {
 		background: var.$white;
 		color: var.$blue;
 	}
+}
+
+.coloured_letters {
+	@include mixins.coloured_letters;
 }
 
 @media(min-width: 60em) {

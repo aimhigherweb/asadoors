@@ -1,24 +1,20 @@
 .footer {
 	position: relative;
-	padding: 20px 20px 5px;
+	padding: 20px;
 	background-color: #f3f6fa;
 
-	font-family: var.$font_main;
-	font-size: 15px;
-	font-style: normal;
-	font-weight: 400;
-
-	text-align: left;
-
 	nav {
+		margin: 20px 0;
+
 		ul {
-			display: flex;
-			flex-direction: column;
+			margin: -10px;
+		}
+
+		li {
+			margin: 10px;
 		}
 
 		a {
-			height: 30px;
-			padding-bottom: 10px;
 			color: var.$black;
 			text-decoration: none;
 
@@ -26,128 +22,144 @@
 				text-decoration: underline;
 			}
 		}
+
+		&.icons {
+			margin-top: 10px;
+			font-size: 1.5em;
+
+			ul {
+				display: flex;
+			}
+
+			a {
+				display: block;
+				line-height: 1;
+
+				&:hover {
+					color: var.$red;
+				}
+			}
+		}
+
+		&.legal {
+			margin-top: 5px;
+
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			li {
+				width: auto;
+			}
+		}
 	}
 
 	.logo {
 		display: flex;
-		flex-direction: row;
 		align-items: center;
-		height: 40px;
 		margin-bottom: 20px;
-		font: size 16px;
-
 		font-weight: 700;
 		text-decoration: none;
 
 		svg {
 			align-content: center;
-			width: 30px;
-			height: 30px;
-			margin-right: 10px;
-		}
-	}
-
-	.contact {
-		display: flex;
-
-		flex-direction: column;
-		align-content: flex-start;
-		width: 100%;
-
-		address {
-			margin:0;
-			margin-bottom: 10px;
+			width: auto;
+			height: 40px;
 		}
 
-		svg {
+		&:hover {
+			outline: 3px solid var.$red;
 
-			width: 22px;
-			height: auto;
-
-			margin-right: auto;
-
-			&:hover{
-
-				fill: var.$white;
-				color: var.$grey_dark;
+			* {
+				filter: grayscale(1);
 			}
-		}
-
-		li{
-			margin-right:10px;
-		}
-
-		a {
-
-			display: flex;
-			justify-content: flex-start;
-
-			padding: 0;
-			color: var.$grey_dark;
-			font-weight: 400;
-		}
-
-		ul {
-			flex-direction: row;
 		}
 	}
 
 	p {
-		margin-bottom: 30px;
+		margin: 0;
 	}
 
 	h2 {
-
+		margin-top: 40px;
 		color: var.$grey_dark;
-
-		font-size: 14px;
-
+		font-size: 0.875em;
 		font-weight: 700;
-
 		text-align: left;
 	}
 
-	a {
-		color: var.$grey_dark;
+	address {
+		margin: 10px 0;
+		font-weight: 400;
+	}
+
+	.copyright {
+		width: 100%;
+		margin: 10px 0;
+		text-align: right;
+
+		a {
+			color: inherit;
+		}
 	}
 }
 
-.footer_widget {
-	margin-top: 20px;
+@media (min-width: 40em) {
+	.footer {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: calc(100% + 40px);
+		margin-right: -20px;
+		margin-left: -20px;
+		padding: 20px 50px;
+
+		nav {
+			margin: 0;
+		}
+
+		h2 {
+			margin-top: 0;
+		}
+
+		> * {
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+	}
 }
 
 @media (min-width: 50em) {
 	.footer {
-		display: flex;
-		flex-direction: row;
+		width: 100%;
+		margin-right: 0;
+		margin-left: 0;
 
-		flex-wrap: wrap;
-		width: 100vw;
-		font-size: 14px;
-
-		.logo {
-			width: 180px;
+		> * {
+			margin-right: 0;
+			margin-left: 0;
 		}
 
-		.contact {
-			width: 220px;
-			margin-left: 10px;
+		.logo {
+			font-size: 0.9em;
+
+			svg {
+				height: 1.8em;
+			}
 		}
 
 		nav {
-			display: flex;
+			&:not(.legal):not(.icons) {
+				max-width: calc(100% - 500px);
 
-			flex-grow: 1;
-			justify-content: center;
-
-			ul {
-				flex-direction: row;
-			}
-
-			a {
-				display: block;
-
-				padding: 10px;
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					margin-top: 0;
+				}
 			}
 
 			&.icons {
@@ -161,13 +173,7 @@
 		}
 
 		.copyright {
-			width: 100%;
-			margin: 10px;
-			text-align: right;
-		}
-
-		.icons {
-			width: 100%;
+			margin-top: 50px;
 		}
 	}
 }
@@ -192,16 +198,7 @@
 }
 @media (min-width: 60em) {
 	.footer {
-		width: 100vw;
-		padding: 50px 5vw 20px;
-		font-size: 15px;
-
-		nav {
-			&.icons {
-				flex-grow: 1;
-				min-width: 200px;
-			}
-		}
+		padding: 50px 5vw;
 	}
 
 	.footer_widget {
@@ -214,16 +211,5 @@ $max_width: 1200px * (10/9);
 @media (min-width: $max_width) {
 	.footer {
 		padding: 50px calc(50vw - 600px);
-		font-size: 15px;
-	}
-}
-
-@media (min-width: 80em) {
-	.footer {
-		font-size: 15px;
-	}
-
-	.footer_widget {
-		margin-top: 20px;
 	}
 }
