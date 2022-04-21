@@ -14,5 +14,3 @@ Bundle together all files except the following and put them in a zip folder
 - package.json
 - README.md
 - yarn.lock
-
-## GitHub Action
