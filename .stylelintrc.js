@@ -45,7 +45,7 @@ module.exports = {
 			'selector-max-attribute': 3,
 			'declaration-no-important': true,
 			'shorthand-property-no-redundant-values': true,
-			'number-max-precision': 2,
+			'number-max-precision': 3,
 			'function-url-no-scheme-relative': true,
 			'color-named': 'never',
 			'no-invalid-double-slash-comments': true,

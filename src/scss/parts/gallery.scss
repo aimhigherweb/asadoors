@@ -1,0 +1,23 @@
+.wp-block-pgcsimplygalleryblock-slider {
+	.pgcsimplygalleryblock-slider-content {
+		position: static;
+	}
+
+	.pgcsimplygalleryblock-slider-thumbs-navi {
+		.pgc-rev-scroll-bar-view, .pgc-rev-scroll-bar-slider-content-view  {
+			min-width: 100%;
+		}
+
+		.pgc-rev-scroll-bar-slider-content-view {
+			display: flex;
+			flex-wrap: wrap;
+			min-height: 100px;
+
+			.pgc-rev-scroll-bar-thumb-simple-border {
+				position: relative;
+				min-width: 100px;
+				min-height: 100px;
+			}
+		}
+	}
+}

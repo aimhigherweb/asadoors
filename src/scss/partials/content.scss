@@ -1,7 +1,7 @@
 main {
 	min-height: calc(100vh - 500px);
 	margin: 0 auto;
-	padding: 20px;
+	padding: 20px 20px 0;
 
 	.subtitle{
 		margin-bottom: 10px;
@@ -13,7 +13,7 @@ main {
 
 @media(min-width: 40em) {
 	main {
-		padding: 20px 50px;
+		padding: 20px 50px 0;
 	}
 }
 
@@ -21,7 +21,7 @@ main {
 	main {
 		width: 90vw;
 		max-width: 1000px;
-		margin: 50px auto;
-		padding: 20px 0;
+		margin: 50px auto 0;
+		padding: 20px 0 0;
 	}
 }

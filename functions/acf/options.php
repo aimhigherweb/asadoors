@@ -1,35 +1,18 @@
 <?php
 
-	if( function_exists('acf_add_local_field_group') ):
-
-		// Social Menu Icons
-		acf_add_local_field_group(array(
-			'key' => 'group_61b083a9d1829',
-			'title' => 'Social Menu Icons',
-			'fields' => array(
-				array(
-					'key' => 'field_61b083bbe6676',
-					'label' => 'Icon',
-					'name' => 'icon',
-					'type' => 'image',
-					'required' => 0,
-					'return_format' => 'url',
-					'preview_size' => 'medium',
-					'library' => 'all',
-					'mime_types' => 'svg',
-				),
-			),
-			'location' => array(
-				array(
-					array(
-						'param' => 'nav_menu_item',
-						'operator' => '==',
-						'value' => 'location/social_menu',
-					),
-				),
-			),
+	// Add Business Details Page
+	if( function_exists('acf_add_options_page') ) {
+		acf_add_options_page(array(
+			'page_title' 	=> 'Business Details',
+			'menu_title'	=> 'Business Details',
+			'menu_slug' 	=> 'business-details',
+			'capability'	=> 'edit_posts',
+			'redirect'		=> false
 		));
+	}
 
+	// Business Details Options
+	if( function_exists('acf_add_local_field_group') ):
 		// Options - Business Info
 		acf_add_local_field_group(array(
 			'key' => 'aimhigher_business_info',
@@ -118,5 +101,5 @@
 		));
 
 	endif;
-    
+
 ?>
