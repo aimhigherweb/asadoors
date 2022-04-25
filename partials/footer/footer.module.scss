@@ -9,7 +9,7 @@
 
 	h2 {
 		margin-top: 40px;
-		color: var.$grey_dark;
+		color: var.$colours_grey_dark;
 		font-size: 0.875em;
 		font-weight: 700;
 		text-align: left;
@@ -33,7 +33,7 @@
 	}
 
 	a {
-		color: var.$black;
+		color: var.$colours_black;
 		text-decoration: none;
 
 		&:hover {
@@ -54,7 +54,7 @@
 			line-height: 1;
 
 			&:hover {
-				color: var.$red;
+				color: var.$colours_red;
 			}
 
 			span {
@@ -92,8 +92,8 @@
 
 .site_name {
 	margin-left: 1ch;
-	color: var.$neutral;
-	font-family: var.$font_headings;
+	color: var.$colours_neutral;
+	font-family: var.$fonts_headings;
 	font-weight: 600;
 	text-decoration: none;
 }
@@ -112,7 +112,7 @@
 	}
 
 	&:hover {
-		outline: 3px solid var.$red;
+		outline: 3px solid var.$colours_red;
 
 		* {
 			filter: grayscale(1);
@@ -131,7 +131,7 @@
 }
 
 .coloured_letters {
-	@include mixins.coloured_letters;
+	@include mixins.theme_coloured_letters;
 }
 
 @media (min-width: 40em) {

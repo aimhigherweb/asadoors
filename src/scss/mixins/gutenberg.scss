@@ -1,16 +1,17 @@
-@mixin gutenberg_backgrounds {
+@use '../variables.scss' as var;
+
+@mixin backgrounds {
 	@each $color,
-		$hex in var.$coloursList {
+		$hex in var.$colours_list {
 		&.has-#{$color}-background-color {
 			--background_colour: #{$hex};
 		}
 	}
 }
 
-@mixin gutenberg_text_colours {
-
+@mixin text_colours {
 	@each $color,
-		$hex in var.$coloursList {
+		$hex in var.$colours_list {
 		&.has-#{$color}-color {
 			--text_colour: #{$hex};
 		}

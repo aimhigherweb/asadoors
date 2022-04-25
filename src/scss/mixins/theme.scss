@@ -1,11 +1,13 @@
+@use '../variables.scss' as var;
+
 @mixin coloured_letters {
 	> * {
 		&:nth-child(2n) {
-			color: var.$red;
+			color: var.$colours_red;
 		}
 
 		&:nth-child(2n - 1) {
-			color: var.$blue;
+			color: var.$colours_blue;
 		}
 	}
 }
@@ -22,6 +24,8 @@
 		left: 50%;
 		width: 100vw;
 		transform: translateX(-50%);
-		background: var.$grey_light;
+		background: var.$colours_grey_light;
 	}
 }
+
+$test: 'Working';

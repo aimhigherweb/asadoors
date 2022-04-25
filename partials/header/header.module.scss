@@ -4,14 +4,14 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 30px;
-	background: var.$white;
-	box-shadow: 0 1px 3px rgba(var.$neutral, 0.15),
-		0 0 8px rgba(var.$neutral, 0.1);
-	font-family: var.$font_main;
+	background: var.$colours_white;
+	box-shadow: 0 1px 3px rgba(var.$colours_neutral, 0.15),
+		0 0 8px rgba(var.$colours_neutral, 0.1);
+	font-family: var.$fonts_main;
 }
 
 .coloured_letters {
-	@include mixins.coloured_letters;
+	@include mixins.theme_coloured_letters;
 }
 
 .nav {
@@ -41,9 +41,9 @@
 		margin: 0;
 		overflow-y: auto;
 		border-radius: 12px;
-		background: var.$white;
-		box-shadow: 0 1px 3px rgba(var.$neutral, 0.15),
-			0 0 8px rgba(var.$neutral, 0.1);
+		background: var.$colours_white;
+		box-shadow: 0 1px 3px rgba(var.$colours_neutral, 0.15),
+			0 0 8px rgba(var.$colours_neutral, 0.1);
 	}
 
 	a {
@@ -64,8 +64,8 @@
 		}
 
 		&.cta{
-			background-color:var.$blue;
-			color: var.$white;
+			background-color:var.$colours_blue;
+			color: var.$colours_white;
 		}
 	}
 }
@@ -88,7 +88,7 @@
 	}
 
 	&:hover {
-		outline: 3px solid var.$red;
+		outline: 3px solid var.$colours_red;
 
 		* {
 			filter: grayscale(1);
@@ -98,8 +98,8 @@
 
 .site_name {
 	margin-left: 1ch;
-	color: var.$neutral;
-	font-family: var.$font_headings;
+	color: var.$colours_neutral;
+	font-family: var.$fonts_headings;
 	font-weight: 600;
 	text-decoration: none;
 }
@@ -111,9 +111,9 @@
 	padding: 10px 15px;
 	border: 2px solid;
 	border-radius: 3px;
-	border-color: var.$black;
+	border-color: var.$colours_black;
 	background: none;
-	color:var.$black;
+	color:var.$colours_black;
 	text-transform: none;
 
 	svg {
@@ -127,15 +127,15 @@
 	}
 
 	&:hover {
-		background-color: var.$blue;
-		color: var.$white;
+		background-color: var.$colours_blue;
+		color: var.$colours_white;
 	}
 }
 
 @media (min-width: 50em) {
 	.header {
 		padding: 20px 50px;
-		color: var.$grey_dark;
+		color: var.$colours_grey_dark;
 	}
 
 	.logo {
@@ -197,7 +197,7 @@
 			}
 
 			&.current_page_item {
-				border-color: var.$red;
+				border-color: var.$colours_red;
 				background: transparent;
 				text-decoration: none;
 			}
@@ -205,13 +205,13 @@
 			&.cta {
 				margin-left: auto;
 				background: none;
-				color: var.$grey_dark;
+				color: var.$colours_grey_dark;
 				font-weight: 700;
 
 				a {
 					padding: 10px calc(1em + 20px) 10px 15px;
 
-					border: 2px solid var.$black;
+					border: 2px solid var.$colours_black;
 					border-radius: 3px;
 
 					background-image: url('./src/img/edit_black.png');
@@ -220,10 +220,10 @@
 					background-size: 1em auto;
 
 					&:hover {
-						border-color: var.$blue;
-						background-color: var.$blue;
+						border-color: var.$colours_blue;
+						background-color: var.$colours_blue;
 						background-image: url('./src/img/edit_white.png');
-						color: var.$white;
+						color: var.$colours_white;
 						text-decoration: none;
 					}
 				}

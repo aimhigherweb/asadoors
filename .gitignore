@@ -24,8 +24,9 @@ src/maps
 style.css
 editor.css
 *.module.scss.json
+*.scss.json
 *.module.css
-
+*.css
 
 asadoors.zip
 

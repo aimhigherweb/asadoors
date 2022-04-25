@@ -1,12 +1,12 @@
 body {
 	color: #000000;
-	font-family: var.$font_main;
+	font-family: var.$fonts_main;
 	font-size: 16px;
 	line-height: 1.5;
 }
 
 a {
-	color: var.$red;
+	color: var.$colours_red;
 	text-underline-offset: 0.4em;
 
 	@include mixins.gutenberg_text_colours;
@@ -27,8 +27,8 @@ p {
 }
 
 h1, h2, h3, h4, h5 {
-	color: var.$neutral;
-	font-family: var.$font_headings;
+	color: var.$colours_neutral;
+	font-family: var.$fonts_headings;
 
 	a {
 		color: inherit;
@@ -68,7 +68,7 @@ h1, h2 {
 }
 
 h3, h4, h5 {
-	color: var.$red;
+	color: var.$colours_red;
 	text-transform: uppercase;
 }
 
@@ -111,7 +111,7 @@ address {
 blockquote {
 	margin: 1em 0;
 	padding: 0;
-	font-family: var.$font_main;
+	font-family: var.$fonts_main;
 	font-size: 1.5em;
 	font-weight: 700;
 
@@ -126,18 +126,18 @@ blockquote {
 	display: inline-block;
 	margin: 20px auto;
 	padding: 10px 20px;
-	border: 2px solid var.$blue;
+	border: 2px solid var.$colours_blue;
 	border-radius: 8px;
-	background: var.$blue;
-	color: var.$white;
+	background: var.$colours_blue;
+	color: var.$colours_white;
 	font-weight: 600;
 	line-height: 1;
 	text-decoration: none;
 	text-transform: uppercase;
 
 	&:hover {
-		background: var.$white;
-		color: var.$blue;
+		background: var.$colours_white;
+		color: var.$colours_blue;
 	}
 }
 

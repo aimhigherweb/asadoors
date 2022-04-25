@@ -7,7 +7,7 @@
 }
 
 *:focus {
-	outline: 3px solid var.$red;
+	outline: 3px solid var.$colours_red;
 }
 
 body, html {
@@ -27,8 +27,7 @@ main {
 }
 
 .sr-only {
-	position: absolute;
-	right: -200vw;
+	@include mixins.sr_only;
 }
 
 @import './fonts.scss';
