@@ -8,7 +8,13 @@
 			foreach ($blocks as $block) {
 
 				require_once(__DIR__ . '/' . $block . '/index.php');
-				
+
+				acf_register_block(array_merge(
+					$block_vars,
+					array(
+						'render_template' => get_theme_file_path('/blocks/' . $block . '/index.php'),
+					)
+				));				
 			}
 			
 		}

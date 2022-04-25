@@ -72,6 +72,11 @@ h3, h4, h5 {
 	text-transform: uppercase;
 }
 
+h2 {
+	margin: 1.6em 0;
+	font-size: 0.936em;
+}
+
 nav {
 	ul, li {
 		margin: 0;
@@ -87,6 +92,19 @@ nav {
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+}
+
+address {
+	color: inherit;
+	font-size: 1.125em;
+	font-style: inherit;
+	font-weight: inherit;
+	line-height: 1.6;
+
+	a {
+		color: inherit;
+		text-decoration: none;
 	}
 }
 
@@ -121,10 +139,6 @@ blockquote {
 		background: var.$white;
 		color: var.$blue;
 	}
-}
-
-.coloured_letters {
-	@include mixins.coloured_letters;
 }
 
 @media(min-width: 60em) {

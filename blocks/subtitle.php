@@ -1,1 +1,0 @@
-<p class="subtitle"><?php echo get_field('subtitle'); ?></p>

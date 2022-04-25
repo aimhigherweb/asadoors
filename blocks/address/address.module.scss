@@ -1,0 +1,7 @@
+.block {
+	composes: block from '../block.module.scss';
+
+	address + h2 {
+		margin-top: 2.5em;
+	}
+}

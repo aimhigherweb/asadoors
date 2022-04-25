@@ -1,12 +1,14 @@
 .block {
-	.cta {
-		margin: 20px auto;
-		text-align: center;
-	}
 
-	.content {
-		@include mixins.child_reset;
-	}
+}
+
+.cta {
+	margin: 20px auto;
+	text-align: center;
+}
+
+.content {
+	@include mixins.child_reset;
 }
 
 @media(min-width: 60em) {
@@ -37,5 +39,3 @@
 		margin-bottom: 150px;
 	}
 }
-
-@import './address.scss';

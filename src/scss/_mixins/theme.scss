@@ -1,0 +1,27 @@
+@mixin coloured_letters {
+	> * {
+		&:nth-child(2n) {
+			color: var.$red;
+		}
+
+		&:nth-child(2n - 1) {
+			color: var.$blue;
+		}
+	}
+}
+
+@mixin feature_background {
+	padding: 20px 0 50px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		width: 100vw;
+		transform: translateX(-50%);
+		background: var.$grey_light;
+	}
+}

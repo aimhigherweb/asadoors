@@ -63,10 +63,10 @@
 
 		<main id="main">
 
-			<?php get_template_part('layouts/' . $template); ?>
+			<?php get_template_part('layouts/' . $template . '/index'); ?>
 		</main>
 
-		<?php get_template_part('partials/footer'); ?>
+		<?php get_template_part('partials/footer/index'); ?>
 		<?php wp_footer(); ?>
 		<script src="<?php echo get_template_directory_uri(); ?>/src/js/main.js"></script>
 	</body>

@@ -23,6 +23,10 @@ node_modules/
 src/maps
 style.css
 editor.css
+*.module.scss.json
+*.module.css
+
+
 asadoors.zip
 
 dist

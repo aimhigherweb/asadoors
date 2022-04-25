@@ -8,7 +8,15 @@
   box-shadow: 0 1px 3px rgba(204, 204, 204, 0.15), 0 0 8px rgba(204, 204, 204, 0.1);
   font-family: "Inter", sans-serif;
 }
-.header-module__header___tp5WC nav {
+
+.header-module__coloured_letters___SrDTW > *:nth-child(2n) {
+  color: #c43b3e;
+}
+.header-module__coloured_letters___SrDTW > *:nth-child(2n-1) {
+  color: #194c9a;
+}
+
+.header-module__nav___WyDru {
   position: relative;
   z-index: 50;
   align-content: center;
@@ -16,10 +24,10 @@
   font-weight: 600;
   text-align: center;
 }
-.header-module__header___tp5WC nav.header-module__open___WX4S3 ul {
+.header-module__nav___WyDru.open ul {
   display: block;
 }
-.header-module__header___tp5WC nav ul {
+.header-module__nav___WyDru ul {
   display: none;
   position: absolute;
   z-index: 150;
@@ -34,21 +42,21 @@
   background: #ffffff;
   box-shadow: 0 1px 3px rgba(204, 204, 204, 0.15), 0 0 8px rgba(204, 204, 204, 0.1);
 }
-.header-module__header___tp5WC nav a {
+.header-module__nav___WyDru a {
   padding: 0.6em;
 }
-.header-module__header___tp5WC nav a .header-module__label___zyQwq {
+.header-module__nav___WyDru a .header-module__label___zyQwq {
   position: static;
   margin-left: 1ch;
 }
-.header-module__header___tp5WC nav li {
+.header-module__nav___WyDru li {
   text-decoration: none;
 }
-.header-module__header___tp5WC nav li.header-module__current_page_item___-ZHBU {
+.header-module__nav___WyDru li.header-module__current_page_item___-ZHBU {
   font-weight: 700;
   text-decoration: none;
 }
-.header-module__header___tp5WC nav li.header-module__cta___8oraA {
+.header-module__nav___WyDru li.header-module__cta___8oraA {
   background-color: #194c9a;
   color: #ffffff;
 }
@@ -76,7 +84,7 @@
   filter: grayscale(1);
 }
 
-.header-module__site-name___0AFXg {
+.header-module__site_name___eAiW- {
   margin-left: 1ch;
   color: #111111;
   font-family: "Swiss 721 BT", "Inter", sans-serif;
@@ -114,28 +122,31 @@
     padding: 20px 50px;
     color: #333333;
   }
-  .header-module__header___tp5WC .header-module__logo___lYPJJ {
+
+  .header-module__logo___lYPJJ {
     flex-shrink: 0;
     margin: 0;
   }
-  .header-module__header___tp5WC .header-module__logo___lYPJJ svg {
+  .header-module__logo___lYPJJ svg {
     font-size: 4em;
   }
-  .header-module__header___tp5WC .header-module__logo___lYPJJ .header-module__site-name___0AFXg {
+
+  .header-module__site_name___eAiW- {
     position: absolute;
     width: 1px;
     height: 1px;
     opacity: 0;
   }
-  .header-module__header___tp5WC nav {
+
+  .header-module__nav___WyDru {
     flex-grow: 1;
     font-size: 0.938em;
     font-weight: 500;
   }
-  .header-module__header___tp5WC nav.header-module__open___WX4S3 ul {
+  .header-module__nav___WyDru.open ul {
     display: flex;
   }
-  .header-module__header___tp5WC nav ul {
+  .header-module__nav___WyDru ul {
     display: flex;
     position: static;
     align-items: center;
@@ -146,32 +157,32 @@
     background: none;
     box-shadow: none;
   }
-  .header-module__header___tp5WC nav a {
+  .header-module__nav___WyDru a {
     padding: 0.5em;
     text-decoration: none;
   }
-  .header-module__header___tp5WC nav a .header-module__label___zyQwq {
+  .header-module__nav___WyDru a .header-module__label___zyQwq {
     position: absolute;
   }
-  .header-module__header___tp5WC nav li {
+  .header-module__nav___WyDru li {
     margin-left: 10px;
     border-bottom: 2px solid transparent;
   }
-  .header-module__header___tp5WC nav li a:hover {
+  .header-module__nav___WyDru li a:hover {
     text-decoration: underline;
   }
-  .header-module__header___tp5WC nav li.header-module__current_page_item___-ZHBU {
+  .header-module__nav___WyDru li.header-module__current_page_item___-ZHBU {
     border-color: #c43b3e;
     background: transparent;
     text-decoration: none;
   }
-  .header-module__header___tp5WC nav li.header-module__cta___8oraA {
+  .header-module__nav___WyDru li.header-module__cta___8oraA {
     margin-left: auto;
     background: none;
     color: #333333;
     font-weight: 700;
   }
-  .header-module__header___tp5WC nav li.header-module__cta___8oraA a {
+  .header-module__nav___WyDru li.header-module__cta___8oraA a {
     padding: 10px calc(1em + 20px) 10px 15px;
     border: 2px solid #111111;
     border-radius: 3px;
@@ -180,7 +191,7 @@
     background-position: calc(100% - 10px) center;
     background-size: 1em auto;
   }
-  .header-module__header___tp5WC nav li.header-module__cta___8oraA a:hover {
+  .header-module__nav___WyDru li.header-module__cta___8oraA a:hover {
     border-color: #194c9a;
     background-color: #194c9a;
     background-image: url("./src/img/edit_white.png");
@@ -196,7 +207,8 @@
   .header-module__header___tp5WC {
     padding: 40px 5vw;
   }
-  .header-module__header___tp5WC nav {
+
+  .header-module__nav___WyDru {
     margin-left: 50px;
   }
 }

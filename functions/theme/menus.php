@@ -8,7 +8,7 @@
 	function nav_menu_icons($items, $args) {
 		global $icon_menus;
 
-		if(in_array($args->theme_location, $icon_menus)) {            
+		if(in_array($args->theme_location, $icon_menus)) {    
 			foreach($items as &$item) {
 				$icon = inline_svg(get_field('icon', $item));
 

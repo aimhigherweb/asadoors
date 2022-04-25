@@ -7,19 +7,12 @@ const postcss = require('gulp-postcss')
 const gulpIf = require('gulp-if')
 const header = require('gulp-header')
 
-const {compileFiles, sourceMaps, cssFiles, browserSync} = require('./config')
+const {compileFiles, cssFiles, browserSync} = require('./config')
 
-const generagePath = (path, filename) => {
-	const base = path.match(/\/wp-content\/themes\/asadoors\/(.+?)\/style\.scss$/i)
-
-	console.log({base})
-
-	return ''
-}
 
 const compileSass = () => (
 	src(compileFiles)
-		.pipe(header(`@use 'sass:math';\n@use 'variables' as var;\n@use 'mixins';\n`))
+		.pipe(header(`@use 'sass:list';\n@use 'sass:map';\n@use 'sass:math';\n@use 'variables' as var;\n@use 'mixins';\n`))
 		.pipe(postcss())
 		.pipe(sourcemaps.init())
 		.pipe(sass({

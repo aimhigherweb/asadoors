@@ -68,11 +68,7 @@
 		margin: 20px -20px;
 
 		.wp-block-column {
-
-			/* stylelint-disable declaration-no-important */
-			flex-basis: 42% !important;
-
-			/* stylelint-enable declaration-no-important */
+			flex-basis: 42%;
 			margin: 0 20px;
 
 			@include mixins.child_reset;
@@ -84,6 +80,12 @@
 
 		.wp-block-buttons {
 			justify-content: flex-start;
+		}
+
+		.wpforms-container {
+			&:first-child {
+				padding-top: 0;
+			}
 		}
 	}
 }

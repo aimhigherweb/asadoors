@@ -30,7 +30,7 @@
 				echo '<img src="' . $logo . '" />';
 			}
 		?>
-		<span class="<?php echo $styles['site-name']; ?>">
+		<span class="<?php echo $styles['site_name']; ?>">
 			<span class="<?php echo $styles['coloured_letters']; ?>" aria-label="<?php echo $name_words[0]; ?></php>">
 				<?php foreach ($name_letters as $letter) {
 					echo '<span>' . $letter . '</span>';
@@ -40,7 +40,7 @@
 		</span>
 	</a>
 	
-	<nav class="<?php echo $styles['main']; ?>">
+	<nav id="main_menu" class="<?php echo classes([$styles['nav'], $styles['main']]); ?>">
 		<button class="<?php echo $styles['hamburger']; ?>" onclick="toggleMenu()">
 			<?php  echo inline_svg(get_template_directory_uri() . '/src/img/hamburger.svg'); ?>
 			Menu

@@ -10,7 +10,6 @@
 
 	$blocks = array(
 		'address',
-		'subtitle',
 		'child_products'
 	);
 
