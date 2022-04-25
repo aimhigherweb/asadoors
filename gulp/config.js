@@ -2,13 +2,13 @@ const browserSync = require('browser-sync')
 
 module.exports = {
 	themeFolders: [
-		'functions',
-		'src',
 		'blocks',
+		'data',
+		'functions',
 		'layouts',
 		'partials',
-		'acf',
-		'parts'
+		'parts',
+		'src'
 	],
 	themeFiles: [
 		'./*.php',
