@@ -28,6 +28,7 @@ module.exports = {
 		'layouts/**/*.scss',
 		'blocks/**/*.scss',
 		'parts/**/*.scss',
+		'**/*.scss',
 	],
 	sassPartials: [
 		'src/scss/**/*.scss',

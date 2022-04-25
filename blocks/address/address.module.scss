@@ -1,7 +1,12 @@
 .block {
 	composes: block from '../block.module.scss';
+	background: rebeccapurple;
 
 	address + h2 {
 		margin-top: 2.5em;
+	}
+
+	address {
+		margin-bottom: 2em;
 	}
 }

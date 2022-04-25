@@ -21,7 +21,7 @@
 	);
 ?>
 
-<div classes="<?php echo classes([$styles['block']]); ?>">
+<div class="<?php echo classes([$styles['block']]); ?>">
 	<?php get_template_part('parts/contact/index'); ?>
 
 	<?php if(check_field_value([$address, $address['line_1']])): ?>
