@@ -1,0 +1,46 @@
+.wpforms-container {
+	&.full_page {
+		form {
+			max-width: unset;
+		}
+
+		.wpforms-page {
+			width: 100%;
+			clear: both;
+			overflow: hidden;
+
+			.wpforms-field {
+				width: 45%;
+
+				&.sidebar {
+					float: right;
+				}
+
+				&.wpforms-field-pagebreak {
+					*[class*='wpforms-pagebreak-''] {
+						display: flex;
+						justify-content: space-between;
+					}
+				}
+			}
+		}
+
+		input {
+			max-width: unset;
+		}
+
+		.sidebar {
+			> div {
+				> * {
+					&:first-child {
+						margin-top: 0;
+					}
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}

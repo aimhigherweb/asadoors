@@ -1,18 +1,14 @@
-.block {
-	background: pink;
+%block {
+
 }
 
-.cta {
+%cta {
 	margin: 20px auto;
 	text-align: center;
 }
 
-.content {
-	@include mixins.child_reset;
-}
-
 @media(min-width: 60em) {
-	.block {
+	%block {
 		margin-top: 50px;
 		margin-bottom: 50px;
 
@@ -27,15 +23,23 @@
 }
 
 @media(min-width: 70em) {
-	.block {
+	%block {
 		margin-top: 100px;
 		margin-bottom: 100px;
 	}
 }
 
 @media(min-width: 90em) {
-	.block {
+	%block {
 		margin-top: 150px;
 		margin-bottom: 150px;
 	}
+}
+
+@mixin block {
+	@extend %block;
+}
+
+@mixin cta {
+	@extend %cta;
 }

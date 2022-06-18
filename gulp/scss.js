@@ -9,14 +9,21 @@ const map = require('vinyl-map')
 
 const {compileFiles, cssFiles, browserSync} = require('./config')
 
+const themeFiles = [
+	'mixins',
+	'animations',
+	'defaults',
+	'variables'
+]
+
+const checkFiles = (path) => themeFiles.some((file) => (
+	path.match(RegExp(`${file}\\.scss`, 'i')) ||
+	path.match(RegExp(`${file}(\\/|\\\\)`, 'i'))
+))
+
 const checkVariables = ({path, contents}) => {
-	if (
-		path.match(/variables\.scss/) ||
-		path.match(/variables(\/|\\)/) ||
-		path.match(/mixins(\/|\\)/) ||
-		path.match(/mixins\.scss/) ||
-		path.match(/animations(\/|\\)/)
-	) {
+	if (checkFiles(path)) {
+		
 		return false
 	}
 
@@ -27,13 +34,8 @@ const checkVariables = ({path, contents}) => {
 	return true
 }
 const checkMixins = ({path}) => {
-	if(
-		path.match(/mixins(\/|\\)/) ||
-		path.match(/mixins\.scss/) ||
-		path.match(/animations(\/|\\)/) ||
-		path.match(/variables\.scss/) ||
-		path.match(/variables(\/|\\)/)
-	) {
+	if(checkFiles(path)) {
+		
 		return false
 	}
 	return true

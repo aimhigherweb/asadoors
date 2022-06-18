@@ -1,0 +1,25 @@
+.hidden_title {
+	@include mixins.sr_only;
+}
+
+.title {
+	@include mixins.defaults_layouts_title;
+}
+
+.has_subtitle {
+	@include mixins.defaults_layouts_eyebrow;
+}
+
+.subtitle {
+	@include mixins.defaults_layouts_title;
+}
+
+.content {
+	@include mixins.child_reset;
+
+	p {
+		max-width: 600px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}

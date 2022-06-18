@@ -1,0 +1,12 @@
+@mixin title {
+	font-size: 2.25em;
+	font-weight: 700;
+	text-align: center;
+}
+
+@mixin eyebrow {
+	font-size: 1em;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+}

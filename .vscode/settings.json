@@ -1,1 +1,6 @@
-{}
+{
+	"files.exclude": {
+		"*.scss.json": true,
+		"src/scss/**/*.css": true
+	}
+}

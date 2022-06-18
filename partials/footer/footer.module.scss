@@ -3,10 +3,6 @@
 	padding: 30px;
 	background-color: #f3f6fa;
 
-	p {
-		margin: 0;
-	}
-
 	h2 {
 		margin-top: 40px;
 		color: var.$colours_grey_dark;
@@ -19,6 +15,10 @@
 	// 	margin: 10px 0;
 	// 	font-weight: 400;
 	// }
+}
+
+.owner {
+	margin: 0;
 }
 
 .nav {

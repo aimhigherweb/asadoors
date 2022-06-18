@@ -43,7 +43,7 @@
 				<?php echo ' ' . implode(array_slice($name_words, 1), ' '); ?>
 			</span>
 		</a>
-		<p>©
+		<p class="<?php echo classes([$styles['owner']]); ?>">©
 			<?php echo date("Y"); ?>
 			<?php echo $name; ?>.
 		</p>
