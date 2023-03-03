@@ -1,7 +1,14 @@
 .block {
 	margin-bottom: 2em;
+	text-align: center;
 
-	address + h2 {
+	address+h2 {
 		margin-top: 2.5em;
+	}
+}
+
+@media(min-width: 40em) {
+	.block {
+		text-align: left;
 	}
 }

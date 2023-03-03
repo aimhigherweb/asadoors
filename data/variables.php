@@ -10,7 +10,7 @@
 
 	$blocks = array(
 		'address',
-		'child_products'
+		'child_products',
 	);
 
 	$colours = [
